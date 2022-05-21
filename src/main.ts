@@ -8,8 +8,8 @@ import * as VueRouter from 'vue-router';
 
 export const routes = [
     { path: '/', component: About, name: 'home' },
-    { path: '/projects', component: Projects, name: 'projects' },
-    { path: '/resume', component: Resume, name: 'resume' },
+    { path: '/portfolio', component: Projects, name: 'portfolio' },
+    { path: '/experience', component: Resume, name: 'experience' },
     { path: '/:pathMatch(.*)*', component: NotFound },
 ];
 

@@ -51,7 +51,7 @@ const onNavClick = (option: any) => {
 
         div {
             font-size: 18px;
-            width: 100px;
+            width: 120px;
             height: 45px;
             flex-direction: column;
             justify-content: space-between;
@@ -93,7 +93,7 @@ const onNavClick = (option: any) => {
         }
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
         flex-direction: column;
         align-items: center;
         #options {
