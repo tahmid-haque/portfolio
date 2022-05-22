@@ -1,19 +1,18 @@
 <script setup lang="ts">
-import { ref } from 'vue';
 import { routes } from '../main';
-import { useRouter } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router';
+import { computed } from '@vue/reactivity';
 const options = routes.slice(0, -1);
 const router = useRouter();
-const active = ref(options[0].name);
-const onNavClick = (option: any) => {
-    active.value = option.name;
-    router.push(option.path);
-};
+const active = computed(() => useRoute().name);
+const onNavClick = (option: any) => router.push(option.path);
 </script>
 
 <template>
     <div id="navbar">
-        <div id="name">Tahmid<span id="lastName">Haque</span></div>
+        <div id="name" class="roboto">
+            Tahmid<span id="lastName">Haque</span>
+        </div>
         <div id="options">
             <div
                 v-for="(option, idx) in options"
@@ -36,8 +35,6 @@ const onNavClick = (option: any) => {
     user-select: none;
 
     #name {
-        font-family: 'Roboto Slab', 'Segoe UI', Tahoma, Geneva, Verdana,
-            sans-serif;
         font-size: 28px;
         font-weight: 300;
 
@@ -51,7 +48,7 @@ const onNavClick = (option: any) => {
 
         div {
             font-size: 18px;
-            width: 120px;
+            padding: 0 10px;
             height: 45px;
             flex-direction: column;
             justify-content: space-between;
@@ -77,7 +74,7 @@ const onNavClick = (option: any) => {
                 &:after {
                     border-color: #ccc;
                     transition: width 350ms ease-in-out;
-                    width: 80%;
+                    width: 100%;
                 }
             }
 
@@ -87,7 +84,7 @@ const onNavClick = (option: any) => {
                 &:before,
                 &:after {
                     border-color: #000;
-                    width: 100%;
+                    width: calc(100% + 20px);
                 }
             }
         }

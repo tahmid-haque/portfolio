@@ -18,6 +18,10 @@ body {
     margin: 0;
 }
 
+.roboto {
+    font-family: 'Roboto Slab', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 #app {
     max-width: 1000px;
     padding: 0 20px;
