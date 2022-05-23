@@ -1,37 +1,89 @@
 <script setup lang="ts">
-import { routes } from '../main';
-import { useRoute, useRouter } from 'vue-router';
-import { computed } from '@vue/reactivity';
-const options = routes.slice(0, -1);
-const router = useRouter();
-const active = computed(() => useRoute().name);
-const onNavClick = (option: any) => router.push(option.path);
+import { ref } from '@vue/reactivity';
+import { onMounted, onUnmounted } from 'vue';
+type Section = {
+    name: string;
+    selectorId: string;
+    element?: HTMLElement | null;
+    location?: number;
+};
+
+const options: Section[] = [
+    { name: 'me', selectorId: 'about' },
+    { name: 'experience', selectorId: 'experience' },
+    { name: 'portfolio', selectorId: 'portfolio' },
+    { name: 'skills', selectorId: 'skills' },
+];
+
+const active = ref(options[0]);
+const scrolled = ref(false);
+const navbar = ref(null);
+const updateElements = () => {
+    for (const option of options) {
+        option.element = document.getElementById(option.selectorId);
+    }
+};
+const updateLocations = () => {
+    const navHeight = (navbar as any).value.offsetHeight + 5;
+    for (const option of options) {
+        option.location =
+            option.element!.getBoundingClientRect().top +
+            window.scrollY -
+            navHeight;
+    }
+};
+const onNavClick = (option: Section) => {
+    window.scrollTo({ top: option.location, behavior: 'smooth' });
+};
+const onScroll = () => {
+    scrolled.value = window.scrollY > 0;
+    for (let i = options.length - 1; i >= 0; i--) {
+        if (window.scrollY >= options[i].location!) {
+            active.value = options[i];
+            break;
+        }
+    }
+};
+
+onMounted(() => {
+    setTimeout(() => {
+        updateElements();
+        updateLocations();
+    }, 200);
+    window.addEventListener('resize', updateLocations);
+    window.addEventListener('scroll', onScroll);
+});
+onUnmounted(() => document.removeEventListener('scroll', onScroll));
 </script>
 
 <template>
-    <div id="navbar">
-        <div id="name" class="roboto">
-            Tahmid<span id="lastName">Haque</span>
-        </div>
-        <div id="options">
-            <div
-                v-for="(option, idx) in options"
-                :class="{ active: option.name === active }"
-                @click="onNavClick(option)"
-                :key="idx"
-            >
-                {{ option.name }}
+    <div id="navbar" :class="{ scrolled }" ref="navbar">
+        <div class="container">
+            <div id="name" class="roboto light">
+                Tahmid<span class="bold">Haque</span>
+            </div>
+            <div id="options">
+                <div
+                    v-for="(option, idx) in options"
+                    :class="{ active: option.name === active.name }"
+                    @click="onNavClick(option)"
+                    :key="idx"
+                >
+                    {{ option.name }}
+                </div>
             </div>
         </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
-#navbar {
+@import url('../assets/styles/utils.css');
+.container {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 20px 0;
+    padding: 20px;
     user-select: none;
 
     #name {
@@ -47,7 +99,9 @@ const onNavClick = (option: any) => router.push(option.path);
         display: flex;
 
         div {
-            font-size: 18px;
+            @media (min-width: 400px) {
+                font-size: 18px;
+            }
             padding: 0 10px;
             height: 45px;
             flex-direction: column;
@@ -56,7 +110,6 @@ const onNavClick = (option: any) => router.push(option.path);
             text-transform: uppercase;
             display: flex;
             cursor: pointer;
-            transition: 200ms all cubic-bezier(0.075, 0.82, 0.165, 1);
 
             &:before,
             &:after {
@@ -72,7 +125,9 @@ const onNavClick = (option: any) => router.push(option.path);
             &.active {
                 &:before,
                 &:after {
-                    border-color: #ccc;
+                    @media (hover: hover) {
+                        border-color: #ccc;
+                    }
                     transition: width 350ms ease-in-out;
                     width: 100%;
                 }
@@ -80,7 +135,6 @@ const onNavClick = (option: any) => router.push(option.path);
 
             &.active {
                 font-weight: 800;
-                border-color: #000;
                 &:before,
                 &:after {
                     border-color: #000;
@@ -95,6 +149,29 @@ const onNavClick = (option: any) => router.push(option.path);
         align-items: center;
         #options {
             margin-top: 15px;
+        }
+    }
+}
+
+#navbar {
+    position: sticky;
+    align-items: center;
+    top: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    &:after {
+        content: '';
+        position: relative;
+        transition: all 250ms ease-in-out;
+        width: 0;
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    &.scrolled {
+        &:after {
+            box-shadow: 0px 2px 3px 3px rgba(0, 0, 0, 0.1);
+            width: 100vw;
         }
     }
 }

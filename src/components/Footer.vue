@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-    <div id="container">
+    <div id="footer">
         <div id="ownership">©2022 by Tahmid Haque</div>
         <div id="links">
             <a class="link" href="https://github.com/tahmid-haque">
@@ -31,9 +31,9 @@
 @import url('../assets/icons/css/brands.min.css');
 @import url('../assets/icons/css/solid.min.css');
 
-#container {
-    padding: 20px 0 5px;
-    margin-top: auto;
+#footer {
+    margin-top: 10px;
+    margin-bottom: 5px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -76,12 +76,14 @@
             position: relative;
         }
 
-        &:hover {
-            &:after,
-            .text {
-                border-color: #000;
-                width: 100%;
-                max-width: 300px;
+        @media (hover: hover) {
+            &:hover {
+                &:after,
+                .text {
+                    border-color: #000;
+                    width: 100%;
+                    max-width: 300px;
+                }
             }
         }
 

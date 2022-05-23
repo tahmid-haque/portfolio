@@ -1,11 +1,19 @@
 <script setup lang="ts">
 import NavBar from './components/NavBar.vue';
 import Footer from './components/Footer.vue';
+import About from './components/About.vue';
+import Portfolio from './components/Portfolio.vue';
+import Experience from './components/Experience.vue';
+import Skills from './components/Skill.vue';
 </script>
 
 <template>
     <NavBar />
     <router-view></router-view>
+    <div class="section"><About /></div>
+    <div class="section"><Experience /></div>
+    <div class="section"><Portfolio /></div>
+    <div class="section"><Skills /></div>
     <Footer />
 </template>
 
@@ -18,16 +26,15 @@ body {
     margin: 0;
 }
 
-.roboto {
-    font-family: 'Roboto Slab', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
 #app {
     max-width: 1000px;
     padding: 0 20px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+}
+
+.section {
+    margin-bottom: 10px;
 }
 </style>
