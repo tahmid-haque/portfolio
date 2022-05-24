@@ -2,9 +2,9 @@
 import NavBar from './components/NavBar.vue';
 import Footer from './components/Footer.vue';
 import About from './components/About.vue';
-import Portfolio from './components/Portfolio.vue';
-import Experience from './components/Experience.vue';
-import Skills from './components/Skill.vue';
+import Portfolio from './components/portfolio/Portfolio.vue';
+import Experience from './components/experience/Experience.vue';
+import Skills from './components/skills/Skill.vue';
 </script>
 
 <template>

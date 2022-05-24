@@ -154,6 +154,7 @@ onUnmounted(() => document.removeEventListener('scroll', onScroll));
 }
 
 #navbar {
+    z-index: 10;
     position: sticky;
     align-items: center;
     top: 0;

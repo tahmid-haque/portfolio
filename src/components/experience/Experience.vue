@@ -57,5 +57,5 @@
 </template>
 
 <style lang="scss" scoped>
-@import url('../assets/styles/utils.css');
+@import url('../../assets/styles/utils.css');
 </style>
