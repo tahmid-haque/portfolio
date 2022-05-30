@@ -24,6 +24,6 @@ const tools = computed(() => props.project.tools.join(', '));
 </template>
 
 <style lang="scss" scoped>
-@import url('../../assets/styles/utils.css');
+@import url('/assets/styles/utils.css');
 @import './portfolio.scss';
 </style>

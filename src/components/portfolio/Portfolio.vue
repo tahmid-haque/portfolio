@@ -30,7 +30,7 @@ const projects = [
         date: 'Summer 2020',
         link: 'https://github.com/tahmid-haque/YelpCamp',
         description:
-            'A simple web app that supports reviewing campsites across the world',
+            'A simple web app that supports reviewing campsites across the world. The first website I developed and extended as part of a web dev course',
     },
     {
         title: 'DE2 Connect 4',
@@ -46,7 +46,7 @@ const projects = [
         date: 'Summer 2022',
         link: 'https://github.com/tahmid-haque/portfolio',
         description:
-            'My personal website and portfolio. Designed to showcase my experiences and profile',
+            'My personal website and portfolio. Designed to showcase my experiences and profile to users of all devices',
     },
 ];
 </script>
@@ -56,13 +56,13 @@ const projects = [
         <div class="heading roboto light">
             My<span class="bold">Portfolio</span>
         </div>
-        <div class="porfolio-cards">
+        <div id="porfolio-cards">
             <PortfolioCard v-for="project in projects" :project="project" />
         </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
-@import url('../../assets/styles/utils.css');
+@import url('/assets/styles/utils.css');
 @import './portfolio.scss';
 </style>

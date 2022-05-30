@@ -12,5 +12,8 @@
 
 .heading {
     font-size: 24px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    width: 100%;
+    border-bottom: 1px solid rgba(191, 191, 191, 0.4);
 }

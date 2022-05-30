@@ -38,7 +38,7 @@ const onNavClick = (option: Section) => {
 const onScroll = () => {
     scrolled.value = window.scrollY > 0;
     for (let i = options.length - 1; i >= 0; i--) {
-        if (window.scrollY >= options[i].location!) {
+        if (window.scrollY >= options[i].location! - 1) {
             active.value = options[i];
             break;
         }
@@ -77,7 +77,7 @@ onUnmounted(() => document.removeEventListener('scroll', onScroll));
 </template>
 
 <style lang="scss" scoped>
-@import url('../assets/styles/utils.css');
+@import url('/assets/styles/utils.css');
 .container {
     width: 100%;
     display: flex;
@@ -144,7 +144,7 @@ onUnmounted(() => document.removeEventListener('scroll', onScroll));
         }
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 716px) {
         flex-direction: column;
         align-items: center;
         #options {

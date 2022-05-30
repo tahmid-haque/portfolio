@@ -2,7 +2,7 @@
 
 <template>
     <div id="about">
-        <img src="../assets/images/centered-profile.jpg" alt="" />
+        <img src="/assets/images/centered-profile.jpg" alt="" />
         <div>
             <div class="heading roboto light">
                 About<span class="bold">Me</span>
@@ -30,12 +30,12 @@
 </template>
 
 <style lang="scss" scoped>
-@import url('../assets/styles/utils.css');
+@import url('/assets/styles/utils.css');
 
 #about {
     display: flex;
 
-    @media (max-width: 700px) {
+    @media (max-width: 716px) {
         flex-direction: column;
         align-items: center;
     }
@@ -48,7 +48,7 @@ img {
     border-radius: 50%;
     margin: 0 20px 0 0;
 
-    @media (max-width: 700px) {
+    @media (max-width: 716px) {
         margin: 0 0 10px 0;
     }
 }

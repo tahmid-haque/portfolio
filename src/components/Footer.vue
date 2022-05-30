@@ -27,9 +27,9 @@
 </template>
 
 <style lang="scss" scoped>
-@import url('../assets/icons/css/fontawesome.min.css');
-@import url('../assets/icons/css/brands.min.css');
-@import url('../assets/icons/css/solid.min.css');
+@import url('/assets/icons/css/fontawesome.min.css');
+@import url('/assets/icons/css/brands.min.css');
+@import url('/assets/icons/css/solid.min.css');
 
 #footer {
     margin-top: 10px;
@@ -38,7 +38,7 @@
     align-items: center;
     justify-content: space-between;
 
-    @media (max-width: 700px) {
+    @media (max-width: 716px) {
         flex-direction: column;
         align-items: center;
     }
