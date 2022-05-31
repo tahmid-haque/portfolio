@@ -7,8 +7,12 @@ const tools = computed(() => props.project.tools.join(', '));
 </script>
 
 <template>
-    <div class="portfolio-card" style="--animation-order: 1">
-        <a class="link" :href="project.link">
+    <div
+        class="portfolio-card"
+        style="--animation-order: 1"
+        data-aos="zoom-in-up"
+    >
+        <a class="link" target="_blank" :href="project.link">
             <div v-for="side in sides" :class="`content content-${side}`">
                 <h2 class="title">{{ project.title }}</h2>
                 <div class="description">

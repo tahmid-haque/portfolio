@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import $ from 'jquery';
-import ScrollReveal from 'scrollreveal';
+import { onMounted, ref, type Ref } from 'vue';
 import ExperienceItem from './ExperienceItem.vue';
+import Heading from '../Heading.vue';
 
 export type Experience = {
     logo: string;
@@ -10,53 +10,6 @@ export type Experience = {
     date: string;
     info: string[];
 };
-
-$(function () {
-    const sr = ScrollReveal();
-
-    if ($(window).width()! < 768) {
-        if ($('.timeline-content').hasClass('js--fadeInLeft')) {
-            $('.timeline-content')
-                .removeClass('js--fadeInLeft')
-                .addClass('js--fadeInRight');
-        }
-
-        sr.reveal('.js--fadeInRight', {
-            origin: 'right',
-            distance: '300px',
-            easing: 'ease-in-out',
-            duration: 800,
-        });
-    } else {
-        sr.reveal('.js--fadeInLeft', {
-            origin: 'left',
-            distance: '300px',
-            easing: 'ease-in-out',
-            duration: 800,
-        });
-
-        sr.reveal('.js--fadeInRight', {
-            origin: 'right',
-            distance: '300px',
-            easing: 'ease-in-out',
-            duration: 800,
-        });
-    }
-
-    sr.reveal('.js--fadeInLeft', {
-        origin: 'left',
-        distance: '300px',
-        easing: 'ease-in-out',
-        duration: 800,
-    });
-
-    sr.reveal('.js--fadeInRight', {
-        origin: 'right',
-        distance: '300px',
-        easing: 'ease-in-out',
-        duration: 800,
-    });
-});
 
 const experiences: Experience[] = [
     {
@@ -127,13 +80,66 @@ const experiences: Experience[] = [
         ],
     },
 ];
+
+// computes timeline shape using position deltas across experience items and bullets
+const arrangeTimeline = () => {
+    const ITEM_OFFSET = 20;
+    const expComponents = document.querySelectorAll(
+        '.timeline-item'
+    ) as any as HTMLElement[];
+    const isDisabled =
+        (window.innerWidth ||
+            document.documentElement.clientWidth ||
+            document.body.clientWidth) <= 716;
+    for (let i = 1; i < expComponents.length; i++) {
+        expComponents[i].style.marginTop = 'unset';
+        if (isDisabled) continue;
+
+        let directUpperExpPos = -Infinity;
+        let lowerDelta = Infinity;
+
+        // get upper circle position
+        const directUpperBulletRect =
+            expComponents[i - 1].children[0].getBoundingClientRect();
+        const directUpperBulletPos =
+            directUpperBulletRect.top + directUpperBulletRect.height;
+
+        // get upper box position
+        if (i > 1) {
+            const directUpperExpRect =
+                expComponents[i - 2].getBoundingClientRect();
+            directUpperExpPos =
+                directUpperExpRect.top + directUpperExpRect.height;
+        }
+
+        // get upper delta
+        const currentExpPos = expComponents[i].getBoundingClientRect().top;
+        const upperDelta =
+            currentExpPos - Math.max(directUpperBulletPos, directUpperExpPos);
+
+        // get lower delta
+        const adjUpperExpRect = expComponents[i - 1].getBoundingClientRect();
+        const adjUpperExpPos = adjUpperExpRect.top + adjUpperExpRect.height;
+        const lowerItem =
+            i < expComponents.length - 1
+                ? expComponents[i + 1]
+                : document.getElementById('portfolio');
+        lowerDelta = lowerItem!.getBoundingClientRect().top - adjUpperExpPos;
+
+        const finalDelta = -Math.min(upperDelta, lowerDelta) + ITEM_OFFSET;
+
+        expComponents[i].style.marginTop = `${finalDelta}px`;
+    }
+};
+onMounted(() => {
+    arrangeTimeline();
+    window.addEventListener('resize', arrangeTimeline);
+});
 </script>
 
 <template>
     <div id="experience">
-        <div class="heading roboto light">
-            My<span class="bold">Experience</span>
-        </div>
+        <Heading subtle-text="My" emphasized-text="Experience" />
         <div id="exp-timeline">
             <ExperienceItem
                 v-for="(experience, idx) of experiences"
@@ -145,6 +151,5 @@ const experiences: Experience[] = [
 </template>
 
 <style lang="scss" scoped>
-@import url('/assets/styles/utils.css');
 @import './experience.scss';
 </style>

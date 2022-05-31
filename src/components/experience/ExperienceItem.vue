@@ -3,14 +3,21 @@ import { computed } from '@vue/reactivity';
 import type { Experience } from './Experience.vue';
 const { index } = defineProps<{ experience: Experience; index: number }>();
 const fadeSelector = computed(
-    () => 'js--fadeIn' + (index % 2 ? 'Right' : 'Left')
+    () =>
+        'zoom-in-' +
+        (index % 2 ||
+        (window.innerWidth ||
+            document.documentElement.clientWidth ||
+            document.body.clientWidth) <= 716
+            ? 'right'
+            : 'left')
 );
 </script>
 
 <template>
     <div class="timeline-item">
         <div class="timeline-bullet"></div>
-        <div :class="`timeline-content ${fadeSelector}`">
+        <div class="timeline-content" :data-aos="fadeSelector">
             <div class="header">
                 <div class="logo">
                     <img

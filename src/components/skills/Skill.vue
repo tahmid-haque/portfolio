@@ -1,10 +1,10 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Heading from '../Heading.vue';
+</script>
 
 <template>
     <div id="skills">
-        <div class="heading roboto light">
-            My<span class="bold">Skills</span>
-        </div>
+        <Heading subtle-text="My" emphasized-text="Skills" />
         <div class="description">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis
             autem tempore qui culpa soluta, aliquid eligendi modi! Earum

@@ -1,13 +1,17 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Heading from './Heading.vue';
+</script>
 
 <template>
     <div id="about">
-        <img src="/assets/images/centered-profile.jpg" alt="" />
+        <img
+            src="/assets/images/centered-profile.jpg"
+            alt=""
+            data-aos="zoom-in"
+        />
         <div>
-            <div class="heading roboto light">
-                About<span class="bold">Me</span>
-            </div>
-            <div class="description">
+            <Heading subtle-text="About" emphasized-text="Me" />
+            <div class="description" data-aos="zoom-out-up">
                 Tahmid is a 4th year Computer Science student at UTSC pursuing a
                 specialization in Software Engineering.​ His industry experience
                 span over 12 months with 8 months of Developer experience at

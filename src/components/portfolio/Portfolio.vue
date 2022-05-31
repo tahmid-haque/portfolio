@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import PortfolioCard from './PortfolioCard.vue';
+import Heading from '../Heading.vue';
 export type Project = {
     title: string;
     tools: string[];
@@ -41,7 +42,7 @@ const projects = [
             'An implementation of the classic Connect 4 game for FPGAs and tested on a DE2 board ',
     },
     {
-        title: 'My Portfolio (This)',
+        title: 'Web Portfolio (This)',
         tools: ['Vue.js (TS)'],
         date: 'Summer 2022',
         link: 'https://github.com/tahmid-haque/portfolio',
@@ -53,9 +54,7 @@ const projects = [
 
 <template>
     <div id="portfolio">
-        <div class="heading roboto light">
-            My<span class="bold">Portfolio</span>
-        </div>
+        <Heading subtle-text="My" emphasized-text="Portfolio" />
         <div id="porfolio-cards">
             <PortfolioCard v-for="project in projects" :project="project" />
         </div>

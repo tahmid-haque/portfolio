@@ -50,7 +50,7 @@ onMounted(() => {
         updateElements();
         updateLocations();
     }, 200);
-    window.addEventListener('resize', updateLocations);
+    window.addEventListener('resize', () => setTimeout(updateLocations, 0));
     window.addEventListener('scroll', onScroll);
 });
 onUnmounted(() => document.removeEventListener('scroll', onScroll));

@@ -4,19 +4,31 @@
     <div id="footer">
         <div id="ownership">©2022 by Tahmid Haque</div>
         <div id="links">
-            <a class="link" href="https://github.com/tahmid-haque">
+            <a
+                class="link"
+                target="_blank"
+                href="https://github.com/tahmid-haque"
+            >
                 <div>
                     <i class="fa-brands fa-github"></i>
                     <div class="text">github.com/tahmid-haque</div>
                 </div>
             </a>
-            <a class="link" href="mailto:tahmid.haque@mail.utoronto.ca">
+            <a
+                class="link"
+                target="_blank"
+                href="mailto:tahmid.haque@mail.utoronto.ca"
+            >
                 <div>
                     <i class="fas fa-envelope"></i>
                     <div class="text">tahmid.haque@mail.utoronto.ca</div>
                 </div>
             </a>
-            <a class="link" href="https://linkedin.com/in/tahmid-h">
+            <a
+                class="link"
+                target="_blank"
+                href="https://linkedin.com/in/tahmid-h"
+            >
                 <div>
                     <i class="fa-brands fa-linkedin"></i>
                     <div class="text">linkedin.com/in/tahmid-h</div>

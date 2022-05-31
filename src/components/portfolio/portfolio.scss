@@ -19,7 +19,7 @@ $colour-text: #fff;
 }
 
 #porfolio-cards {
-    margin: calc($base-grid * 2) auto calc($base-grid * 5);
+    margin: calc($base-grid * 2) auto 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
