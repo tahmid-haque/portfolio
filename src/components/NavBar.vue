@@ -50,6 +50,14 @@ onMounted(() => {
         updateElements();
         updateLocations();
     }, 200);
+
+    if (
+        !(
+            'ontouchstart' in document.documentElement ||
+            navigator.maxTouchPoints > 0
+        )
+    )
+        document.getElementById('options')?.classList.add('hover-enabled');
     window.addEventListener('resize', () => setTimeout(updateLocations, 0));
     window.addEventListener('scroll', onScroll);
 });
@@ -84,6 +92,7 @@ onUnmounted(() => document.removeEventListener('scroll', onScroll));
     align-items: center;
     justify-content: space-between;
     padding: 20px;
+    background-color: white;
     user-select: none;
 
     #name {
@@ -125,9 +134,6 @@ onUnmounted(() => document.removeEventListener('scroll', onScroll));
             &.active {
                 &:before,
                 &:after {
-                    @media (hover: hover) {
-                        border-color: #ccc;
-                    }
                     transition: width 350ms ease-in-out;
                     width: 100%;
                 }
@@ -174,6 +180,13 @@ onUnmounted(() => document.removeEventListener('scroll', onScroll));
             box-shadow: 0px 2px 3px 3px rgba(0, 0, 0, 0.1);
             width: 100vw;
         }
+    }
+}
+
+#options.hover-enabled div:hover {
+    &:before,
+    &:after {
+        border-color: #ccc;
     }
 }
 </style>

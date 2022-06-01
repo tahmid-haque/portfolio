@@ -1,17 +1,30 @@
 <script setup lang="ts">
 import { computed } from '@vue/reactivity';
+import { onMounted, ref } from 'vue';
 import type { Experience } from './Experience.vue';
 const { index } = defineProps<{ experience: Experience; index: number }>();
-const fadeSelector = computed(
-    () =>
-        'zoom-in-' +
-        (index % 2 ||
-        (window.innerWidth ||
-            document.documentElement.clientWidth ||
-            document.body.clientWidth) <= 716
-            ? 'right'
-            : 'left')
+const windowSize = ref(
+    window.innerWidth ||
+        document.documentElement.clientWidth ||
+        document.body.clientWidth
 );
+const fadeSelector = computed(
+    () => 'zoom-in-' + (index % 2 || windowSize.value <= 716 ? 'right' : 'left')
+);
+
+onMounted(() => {
+    let flag: any;
+    const debouncedUpdate = () => {
+        clearTimeout(flag);
+        flag = setTimeout(() => {
+            windowSize.value =
+                window.innerWidth ||
+                document.documentElement.clientWidth ||
+                document.body.clientWidth;
+        }, 50);
+    };
+    window.addEventListener('resize', debouncedUpdate);
+});
 </script>
 
 <template>

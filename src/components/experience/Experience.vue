@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { onMounted, ref, type Ref } from 'vue';
-import ExperienceItem from './ExperienceItem.vue';
+import { onMounted } from 'vue';
 import Heading from '../Heading.vue';
+import ExperienceItem from './ExperienceItem.vue';
 
 export type Experience = {
     logo: string;

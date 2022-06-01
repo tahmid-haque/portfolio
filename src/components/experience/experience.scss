@@ -136,6 +136,13 @@ $border: #000;
     width: 20px;
     height: 20px;
     background: #fff;
+    background-image: repeating-linear-gradient(
+        -24deg,
+        transparent,
+        transparent 4px,
+        black 0,
+        black 5px
+    );
     border-radius: 50%;
     position: absolute;
     left: 50%;

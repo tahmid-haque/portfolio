@@ -1,4 +1,16 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { onMounted } from 'vue';
+
+onMounted(() => {
+    if (
+        !(
+            'ontouchstart' in document.documentElement ||
+            navigator.maxTouchPoints > 0
+        )
+    )
+        document.getElementById('links')?.classList.add('hover-enabled');
+});
+</script>
 
 <template>
     <div id="footer">
@@ -32,6 +44,16 @@
                 <div>
                     <i class="fa-brands fa-linkedin"></i>
                     <div class="text">linkedin.com/in/tahmid-h</div>
+                </div>
+            </a>
+            <a
+                class="link"
+                href="/public/assets/documents/Tahmid_Haque_Resume.pdf"
+                download
+            >
+                <div>
+                    <i class="fa-solid fa-download"></i>
+                    <div class="text">Download Resume</div>
                 </div>
             </a>
         </div>
@@ -88,21 +110,19 @@
             position: relative;
         }
 
-        @media (hover: hover) {
-            &:hover {
-                &:after,
-                .text {
-                    border-color: #000;
-                    width: 100%;
-                    max-width: 300px;
-                }
-            }
-        }
-
         & > div {
             display: flex;
             align-items: center;
         }
+    }
+}
+
+#links.hover-enabled .link:hover {
+    &:after,
+    .text {
+        border-color: #000;
+        width: 100%;
+        max-width: 300px;
     }
 }
 </style>

@@ -1,34 +1,193 @@
 <script setup lang="ts">
 import Heading from '../Heading.vue';
+import SkillGroup from './SkillGroup.vue';
+
+export type SkillItem = {
+    name: string;
+    level: number;
+};
+
+export type SkillGroupData = {
+    title: string;
+    items: SkillItem[];
+};
+
+const skillData: SkillGroupData[] = [
+    {
+        title: 'Languages',
+        items: [
+            {
+                name: 'C',
+                level: 82,
+            },
+            {
+                name: 'C#',
+                level: 50,
+            },
+            {
+                name: 'CSS (SCSS)',
+                level: 70,
+            },
+            {
+                name: 'Haskell',
+                level: 60,
+            },
+            {
+                name: 'HTML',
+                level: 90,
+            },
+            {
+                name: 'NodeJS',
+                level: 75,
+            },
+            {
+                name: 'Java',
+                level: 85,
+            },
+            {
+                name: 'JavaScript',
+                level: 90,
+            },
+            {
+                name: 'Python',
+                level: 80,
+            },
+            {
+                name: 'TypeScript',
+                level: 95,
+            },
+            {
+                name: 'Verilog',
+                level: 50,
+            },
+        ],
+    },
+
+    {
+        title: 'Frameworks',
+        items: [
+            {
+                name: 'AngularJS',
+                level: 75,
+            },
+            {
+                name: 'Express',
+                level: 90,
+            },
+            {
+                name: 'Flask',
+                level: 60,
+            },
+            {
+                name: 'Jasmine',
+                level: 65,
+            },
+            {
+                name: 'Jest',
+                level: 60,
+            },
+            {
+                name: 'JUnit',
+                level: 65,
+            },
+            {
+                name: 'PyTest',
+                level: 55,
+            },
+            {
+                name: 'ReactJS',
+                level: 85,
+            },
+            {
+                name: 'Spring Boot',
+                level: 75,
+            },
+            {
+                name: 'Vue.js',
+                level: 70,
+            },
+        ],
+    },
+    {
+        title: 'Databases',
+        items: [
+            {
+                name: 'MongoDB',
+                level: 80,
+            },
+            {
+                name: 'SQL (PostGres)',
+                level: 70,
+            },
+            {
+                name: 'Redis',
+                level: 65,
+            },
+        ],
+    },
+    {
+        title: 'Others',
+        items: [
+            {
+                name: 'Bash (Unix)',
+                level: 75,
+            },
+            {
+                name: 'Bootstrap',
+                level: 60,
+            },
+            {
+                name: 'Docker',
+                level: 70,
+            },
+            {
+                name: 'Git',
+                level: 85,
+            },
+            {
+                name: 'GitHub Actions',
+                level: 75,
+            },
+            {
+                name: 'GraphQL',
+                level: 70,
+            },
+            {
+                name: 'JQuery',
+                level: 50,
+            },
+        ],
+    },
+];
 </script>
 
 <template>
     <div id="skills">
         <Heading subtle-text="My" emphasized-text="Skills" />
-        <div class="description">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis
-            autem tempore qui culpa soluta, aliquid eligendi modi! Earum
-            perferendis magnam, nesciunt praesentium reiciendis iusto eum ipsa
-            corrupti iure saepe similique culpa accusantium quod aperiam
-            doloremque rerum vel necessitatibus voluptas ad est esse asperiores
-            voluptate. Nihil iusto aliquam animi culpa quod aliquid quo eveniet
-            dolore mollitia. Itaque voluptatem beatae ea, quas voluptate nisi
-            illo placeat soluta pariatur ut dolores similique quisquam ad ex
-            eius sunt magni eligendi, quidem obcaecati sequi labore quod velit!
-            Aut, minima! Dicta sequi pariatur architecto laudantium temporibus,
-            tenetur laboriosam iste, facilis ad hic, voluptate ab soluta minus
-            non. Repellendus veniam dolores voluptatibus molestias debitis minus
-            iure vero. In magni atque, facere cupiditate sequi nemo provident
-            mollitia, molestias ab nostrum ipsa porro voluptatibus numquam quam.
-            Nesciunt quisquam et eaque pariatur reiciendis voluptatem corrupti
-            laboriosam beatae neque fugiat expedita impedit blanditiis atque
-            recusandae molestias dicta esse quae enim, nisi praesentium
-            consequuntur asperiores amet reprehenderit? Impedit nihil
-            praesentium fuga in.
+        <div id="skillGroups">
+            <SkillGroup
+                v-for="skillGroup of skillData"
+                class="group"
+                :skill-group="skillGroup"
+            />
         </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
 @import url('/assets/styles/utils.css');
+
+#skillGroups {
+    display: grid;
+    row-gap: 1rem;
+    column-gap: 1.5rem;
+
+    @media (min-width: 717px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.group {
+    box-sizing: border-box;
+}
 </style>
