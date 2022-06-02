@@ -50,7 +50,7 @@ onMounted(() => {
             </a>
             <a
                 class="link"
-                href="/public/assets/documents/Tahmid_Haque_Resume.pdf"
+                href="/assets/documents/Tahmid_Haque_Resume.pdf"
                 download
             >
                 <div>
