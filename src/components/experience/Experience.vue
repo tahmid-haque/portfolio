@@ -18,9 +18,7 @@ const experiences: Experience[] = [
         position: 'Software Development Engineer Intern',
         date: 'May 2022 - Present',
         info: [
-            'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec dictum',
-            'Etiam consectetur mi eget risus ornare fermentum. Duis congue ipsum sem, eu fermentum nisi congue.',
-            'Fusce scelerisque nec velit a hendrerit. Sed tincidunt dolor nec risus molestie egestas. Aenean sit.',
+            'Currently developing a GraphQL documentation tool to enhance developer experiences when accessing large-scale APIs',
         ],
     },
     {

@@ -11,7 +11,7 @@ export type Project = {
 const projects = [
     {
         title: 'Hexagon Security Platform',
-        tools: ['React (TS)', 'NodeJS (Express)', 'MongoDB'],
+        tools: ['React (TS)', 'NodeJS', 'GraphQL', 'MongoDB'],
         date: 'Winter 2022',
         link: 'https://github.com/tahmid-haque/hexagon-security',
         description:
@@ -23,7 +23,7 @@ const projects = [
         date: 'Summer 2020',
         link: 'https://github.com/tahmid-haque/bytes-rewards',
         description:
-            'A restaurant-oriented rewards platform with 2 web apps to support reward curation and client management',
+            'A restaurant-oriented rewards platform with 2 web apps to support reward curation and client management alongside a static website to document development progress',
     },
     {
         title: 'YelpCamp',
@@ -31,7 +31,7 @@ const projects = [
         date: 'Summer 2020',
         link: 'https://github.com/tahmid-haque/YelpCamp',
         description:
-            'A simple web app that supports reviewing campsites across the world. The first website I developed and extended as part of a web dev course',
+            'A simple web app that supports reviewing campsites across the world. The first website I developed and revamped as part of a web development course',
     },
     {
         title: 'DE2 Connect 4',
@@ -39,7 +39,7 @@ const projects = [
         date: 'Summer 2019',
         link: 'https://github.com/tahmid-haque/DE2_Connect-4',
         description:
-            'An implementation of the classic Connect 4 game for FPGAs and tested on a DE2 board ',
+            'An implementation of the classic 2-player Connect 4 game, designed for FPGAs and tested on a DE2 board',
     },
     {
         title: 'Web Portfolio (This)',

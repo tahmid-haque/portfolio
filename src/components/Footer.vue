@@ -14,7 +14,9 @@ onMounted(() => {
 
 <template>
     <div id="footer">
-        <div id="ownership">©2022 by Tahmid Haque</div>
+        <div id="ownership">
+            <strong>©2022</strong> Designed by Tahmid Haque
+        </div>
         <div id="links">
             <a
                 class="link"

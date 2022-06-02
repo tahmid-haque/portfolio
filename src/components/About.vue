@@ -12,22 +12,17 @@ import Heading from './Heading.vue';
         <div>
             <Heading subtle-text="About" emphasized-text="Me" />
             <div class="description" data-aos="zoom-out-up">
-                Tahmid is a 4th year Computer Science student at UTSC pursuing a
-                specialization in Software Engineering.​ His industry experience
-                span over 12 months with 8 months of Developer experience at
-                CaseWare International. In this role, Tahmid developed an
-                upcoming web app using a Spring Boot-Angular-PostgreSQL stack
-                and in addition, designed an AWS infrastructure for handling
-                efficient data pushes. Following this experience, he began his
-                work as a TA for upper year CS courses, helping his fellow
-                students understand low-level concepts within software.​
-                Throughout this journey, Tahmid developed an interest towards
-                web development and subsequently, his favourite programming
-                language is TypeScript. His ultimate goal is to make an impact
-                in the tech industry as a software developer. Given free time,
-                Tahmid enjoys spending it following trends in technology and
-                exploring the beautiful coastline around the GTA. To see what
-                he's up to next, reach out on LinkedIn!
+                I am a <strong>Computer Science</strong> student at the
+                <strong>University of Toronto</strong> pursuing a specialization
+                in <strong>Software Engineering</strong>. I’m now in my final
+                year of study and have obtained
+                <strong>1+ years of experience</strong> interning across a few
+                software companies. I’ve also helped build/teach a few courses
+                surrounding low-level concepts in computer science. Currently, I
+                have an interest in <strong>web development</strong> and
+                <strong>cybersecurity</strong> but ultimately wish to make an
+                impact within the industry! To learn more about me, see my
+                resume or get in touch, keep scrolling!
             </div>
         </div>
     </div>
@@ -55,5 +50,9 @@ img {
     @media (max-width: 716px) {
         margin: 0 0 10px 0;
     }
+}
+
+.description {
+    font-size: 18px;
 }
 </style>
