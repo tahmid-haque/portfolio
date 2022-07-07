@@ -19,6 +19,7 @@ const experiences: Experience[] = [
         date: 'May 2022 - Present',
         info: [
             'Currently developing a GraphQL documentation tool to enhance developer experiences when accessing large-scale APIs',
+            'Utilized numerous AWS resources including Lambda, S3 & EventBridge to automate website generation and retrieval',
         ],
     },
     {
