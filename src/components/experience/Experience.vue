@@ -18,8 +18,9 @@ const experiences: Experience[] = [
         position: 'Software Development Engineer Intern',
         date: 'May 2022 - Present',
         info: [
-            'Currently developing a GraphQL documentation tool to enhance developer experiences when accessing large-scale APIs',
-            'Utilized numerous AWS resources including Lambda, S3 & EventBridge to automate website generation and retrieval',
+            'Built a GraphQL documentation tool to enhance developer experiences when accessing a 1000+ definition schema',
+            'Embedded the documentation tool within a React (TS) web app allowing for further customization & extensibility',
+            'Provisioned 5+ AWS resources including Lambda, VPC, CodeBuild & others to automate website generation via CDK',
         ],
     },
     {
@@ -28,10 +29,9 @@ const experiences: Experience[] = [
         position: 'Teaching Assistant',
         date: 'Summer 2021, Winter 2022',
         info: [
-            'Assisted in the courses: CSCC69 Operating Systems & CSCB58 Computer Organization',
-            'Held weekly tutorials, practicals and office hours to teach students about low-level concepts including concurrency, virtual memory, file systems and digital logic',
-            'Created videos surrounding memory management to help students understand various virtual memory data structures',
-            'Graded and provided feedback in regards to student assignments in a timely manner',
+            'Hosted weekly tutorials, practicals & office hours with 25+ undergraduates to teach students about low-level concepts including concurrency, virtual memory, file systems & digital logic',
+            'Created videos surrounding memory management to help 100+ students understand virtual memory data structures',
+            'Graded and provided feedback in regards to 250+ student assignments & inquiries in a timely fashion',
         ],
     },
     {
@@ -62,9 +62,9 @@ const experiences: Experience[] = [
         position: 'QA Analyst',
         date: 'September 2019 - December 2019',
         info: [
-            'Verified and tracked over 12+ bugfixes and feature implementations per day to aid in clearing large backlog of stories while following Agile workflows',
-            'Coordinated across software teams in resolving major obstacles on Web, Android and iOS platforms to ensure a consistent experience when using the product',
-            'Presented my findings in a clear and concise format using Pivotal Tracker, documents and spreadsheets, allowing for effortless access to product progress/status',
+            'Verified over 12+ bugfixes & feature implementations per day while following Agile workflows',
+            'Coordinated across teams in resolving obstacles on Web/Android/iOS platforms to ensure consistent user experiences',
+            'Applied Pivotal Tracker, documents & spreadsheets to allow for effortless access to product progress/status',
         ],
     },
     {
@@ -73,9 +73,10 @@ const experiences: Experience[] = [
         position: 'HBSC - Computer Science',
         date: 'September 2018 - December 2022',
         info: [
+            'GPA: 3.81/4.00',
             'Designated as a U of T Scholar',
-            'Named on Dean’s List: Summer 2019, Fall 2020, Fall 2021',
-            'cGPA: 3.81/4.00',
+            'Named on Dean’s List: 2019, 2020, 2021',
+            '(3x) Teaching Assistant: Operating Systems & Computer Organization (Hardware)',
         ],
     },
 ];
