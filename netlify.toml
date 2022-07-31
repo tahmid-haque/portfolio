@@ -1,0 +1,15 @@
+[build]
+  publish = "dist/"
+  command = "npm run build"
+
+[[redirects]]
+  from = "/i/hexagon"
+  to = "https://hexagon-web.xyz/"
+
+[[redirects]]
+  from = "/i/rewards"
+  to = "https://github.com/tahmid-haque/bytes-rewards"
+
+[[redirects]]
+  from = "/*"
+  to = "/index"
