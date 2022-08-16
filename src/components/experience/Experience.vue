@@ -16,11 +16,10 @@ const experiences: Experience[] = [
         logo: 'amazon.jpg',
         organization: 'Amazon Inc.',
         position: 'Software Development Engineer Intern',
-        date: 'May 2022 - Present',
+        date: 'May 2022 - August 2022',
         info: [
-            'Built a GraphQL documentation tool to enhance developer experiences when accessing a 1000+ definition schema',
-            'Embedded the documentation tool within a React (TS) web app allowing for further customization & extensibility',
-            'Provisioned 5+ AWS resources including Lambda, VPC, CodeBuild & others to automate website generation via CDK',
+            'Improved developer experiences when working with a 1000+ definition schema by embedding a GraphQL documentation tool within a React (TypeScript) web app, allowing for customization, maintainability & extensibility in the long term',
+            'Facilitated automated website generation by provisioning 5+ AWS resources including Lambda, VPC, & others via CDK',
         ],
     },
     {
@@ -29,9 +28,9 @@ const experiences: Experience[] = [
         position: 'Teaching Assistant',
         date: 'Summer 2021, Winter 2022',
         info: [
-            'Hosted weekly tutorials, practicals & office hours with 25+ undergraduates to teach students about low-level concepts including concurrency, virtual memory, file systems & digital logic',
-            'Created videos surrounding memory management to help 100+ students understand virtual memory data structures',
-            'Graded and provided feedback in regards to 250+ student assignments & inquiries in a timely fashion',
+            'Educated 25+ students weekly about low-level OS/Hardware concepts by hosting tutorials, practicals & office hours',
+            'Promoted the understanding of OS data structures to 100+ students by creating videos around memory management',
+            'Achieved scheduling targets by grading & preparing feedback for 250+ undergraduate assignments in a timely fashion',
         ],
     },
     {
@@ -40,10 +39,10 @@ const experiences: Experience[] = [
         position: 'Software Developer',
         date: 'September 2020 - April 2021',
         info: [
-            'Developed and released a web app using a TS (Angular) / Java (Spring) / PostgreSQL stack to deliver analytics data to accounting professionals in an intuitive format',
-            'Designed and researched a distributed infrastructure to handle performant data pushes from desktop to cloud environments using AWS technologies',
-            'Exemplified strong programming practices by creating solid documentation and integrating code coverage tools into development pipeline, increasing unit test coverage by 20%',
-            'Collaborated with numerous teams across departments in an efficient manner, resulting in 30%+ more stories completed and positive UI reception among stakeholders',
+            'Conceptualized a distributed infrastructure to handle performant data pushes from desktop to cloud environments by designing 3+ approaches, researching 8+ AWS technologies and evaluating the viability of options across 10 metrics',
+            'Developed & released an analytics web app to positive UX reception by insisting for and applying customer feedback',
+            'Increased unit test coverage 20% by creating solid documentation and incorporating code coverage into CI workflow',
+            'Expanded story completion 30%+ by collaborating across teams efficiently and prioritizing customer-specific features',
         ],
     },
     {
@@ -52,8 +51,8 @@ const experiences: Experience[] = [
         position: 'Curriculum Designer',
         date: 'July 2020 - August 2020',
         info: [
-            'Worked in a team of 2 to design two web development courses for youth aged 12-18, creating course material surrounding HTML / CSS / JS',
-            'Aided in the development of a Python course for elementary aged students by curating fun exercises that develop problem-solving abilities',
+            'Designed 2 web development courses targeted towards youth aged 12-18, creating course material surrounding HTML / CSS / JS',
+            'Curated 15 enjoyable exercises for a Python course aimed towards elementary aged students to develop problem-solving abilities',
         ],
     },
     {
@@ -62,9 +61,9 @@ const experiences: Experience[] = [
         position: 'QA Analyst',
         date: 'September 2019 - December 2019',
         info: [
-            'Verified over 12+ bugfixes & feature implementations per day while following Agile workflows',
-            'Coordinated across teams in resolving obstacles on Web/Android/iOS platforms to ensure consistent user experiences',
-            'Applied Pivotal Tracker, documents & spreadsheets to allow for effortless access to product progress/status',
+            'Cleared QA backlog by verifying 12+ bugfixes & feature implementations per day while following Agile workflows',
+            'Ensured consistent experiences across platforms by evaluating Web, Android & iOS products against design standards',
+            'Supplied effortless access to product progress by applying custom systems on Pivotal Tracker, documents & spreadsheets',
         ],
     },
     {
@@ -74,7 +73,7 @@ const experiences: Experience[] = [
         date: 'September 2018 - December 2022',
         info: [
             'GPA: 3.81/4.00',
-            'Designated as a U of T Scholar',
+            'Designated as a UofT Scholar upon admission',
             'Named on Dean’s List: 2019, 2020, 2021',
             '(3x) Teaching Assistant: Operating Systems & Computer Organization (Hardware)',
         ],
