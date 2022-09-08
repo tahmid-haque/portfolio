@@ -13,6 +13,17 @@ export type Experience = {
 
 const experiences: Experience[] = [
     {
+        logo: 'utoronto.jpg',
+        organization: 'University of Toronto',
+        position: 'Teaching Assistant',
+        date: 'Summer 2021, Winter 2022, Fall 2022',
+        info: [
+            'Educated 25+ students weekly about low-level OS/Hardware concepts by hosting tutorials, practicals & office hours',
+            'Promoted the understanding of OS data structures to 100+ students by creating videos around memory management',
+            'Achieved scheduling targets by grading & preparing feedback for 250+ undergraduate assignments in a timely fashion',
+        ],
+    },
+    {
         logo: 'amazon.jpg',
         organization: 'Amazon Inc.',
         position: 'Software Development Engineer Intern',
@@ -20,17 +31,6 @@ const experiences: Experience[] = [
         info: [
             'Improved developer experiences when working with a 1000+ definition schema by embedding a GraphQL documentation tool within a React (TypeScript) web app, allowing for customization, maintainability & extensibility in the long term',
             'Facilitated automated website generation by provisioning 5+ AWS resources including Lambda, VPC, & others via CDK',
-        ],
-    },
-    {
-        logo: 'utoronto.jpg',
-        organization: 'University of Toronto',
-        position: 'Teaching Assistant',
-        date: 'Summer 2021, Winter 2022',
-        info: [
-            'Educated 25+ students weekly about low-level OS/Hardware concepts by hosting tutorials, practicals & office hours',
-            'Promoted the understanding of OS data structures to 100+ students by creating videos around memory management',
-            'Achieved scheduling targets by grading & preparing feedback for 250+ undergraduate assignments in a timely fashion',
         ],
     },
     {
@@ -75,7 +75,7 @@ const experiences: Experience[] = [
             'GPA: 3.81/4.00',
             'Designated as a UofT Scholar upon admission',
             'Named on Dean’s List: 2019, 2020, 2021',
-            '(3x) Teaching Assistant: Operating Systems & Computer Organization (Hardware)',
+            '(4x) Teaching Assistant: Operating Systems (x2), Computer Organization (Hardware), Computer & Network Security',
         ],
     },
 ];
