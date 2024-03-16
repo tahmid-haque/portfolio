@@ -15,7 +15,7 @@ onMounted(() => {
 <template>
     <div id="footer">
         <div id="ownership">
-            <strong>©2022</strong> Designed by Tahmid Haque
+            <strong>©2024</strong> Designed by Tahmid Haque
         </div>
         <div id="links">
             <a
@@ -35,7 +35,7 @@ onMounted(() => {
             >
                 <div>
                     <i class="fas fa-envelope"></i>
-                    <div class="text">tahmid.haque@mail.utoronto.ca</div>
+                    <div class="text">tahmid.haque@alum.utoronto.ca</div>
                 </div>
             </a>
             <a
@@ -46,16 +46,6 @@ onMounted(() => {
                 <div>
                     <i class="fa-brands fa-linkedin"></i>
                     <div class="text">linkedin.com/in/tahmid-h</div>
-                </div>
-            </a>
-            <a
-                class="link"
-                href="/assets/documents/Tahmid_Haque_Resume.pdf"
-                download
-            >
-                <div>
-                    <i class="fa-solid fa-download"></i>
-                    <div class="text">Download Resume</div>
                 </div>
             </a>
         </div>

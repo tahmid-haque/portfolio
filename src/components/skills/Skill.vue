@@ -29,6 +29,10 @@ const skillData: SkillGroupData[] = [
                 level: 70,
             },
             {
+                name: 'Go',
+                level: 65,
+            },
+            {
                 name: 'Haskell',
                 level: 60,
             },
@@ -156,6 +160,10 @@ const skillData: SkillGroupData[] = [
                 name: 'JQuery',
                 level: 50,
             },
+            {
+                name: 'Terraform',
+                level: 55
+            }
         ],
     },
 ];

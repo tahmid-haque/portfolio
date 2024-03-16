@@ -13,6 +13,15 @@ export type Experience = {
 
 const experiences: Experience[] = [
     {
+        logo: 'figma.jpg',
+        organization: 'Figma',
+        position: 'Software Engineer',
+        date: 'July 2023 - Present',
+        info: [
+            'Working in infrastructure on realtime data systems (LiveGraph)'
+        ],
+    },
+    {
         logo: 'utoronto.jpg',
         organization: 'University of Toronto',
         position: 'Teaching Assistant',
@@ -25,7 +34,7 @@ const experiences: Experience[] = [
     },
     {
         logo: 'amazon.jpg',
-        organization: 'Amazon Inc.',
+        organization: 'Amazon',
         position: 'Software Development Engineer Intern',
         date: 'May 2022 - August 2022',
         info: [
@@ -35,7 +44,7 @@ const experiences: Experience[] = [
     },
     {
         logo: 'caseware.jpg',
-        organization: 'CaseWare International Inc.',
+        organization: 'CaseWare International',
         position: 'Software Developer',
         date: 'September 2020 - April 2021',
         info: [
@@ -57,7 +66,7 @@ const experiences: Experience[] = [
     },
     {
         logo: 'vouchr.jpg',
-        organization: 'Vouchr Ltd.',
+        organization: 'Vouchr',
         position: 'QA Analyst',
         date: 'September 2019 - December 2019',
         info: [
