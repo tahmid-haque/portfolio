@@ -31,11 +31,11 @@ onMounted(() => {
             <a
                 class="link"
                 target="_blank"
-                href="mailto:tahmid.haque@mail.utoronto.ca"
+                href="mailto:tahmid.haque@alumni.utoronto.ca"
             >
                 <div>
                     <i class="fas fa-envelope"></i>
-                    <div class="text">tahmid.haque@alum.utoronto.ca</div>
+                    <div class="text">tahmid.haque@alumni.utoronto.ca</div>
                 </div>
             </a>
             <a
